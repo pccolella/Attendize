@@ -59,8 +59,8 @@ return [
     'question_radio_single'         => 6,
 
 
-    'default_timezone'           => 30, #Europe/Dublin
-    'default_currency'           => 2, #Euro
+    'default_timezone'           => env('DEFAULT_TIMEZONE', 30), #Default Europe/Dublin
+    'default_currency'           => env('DEFAULT_CURRENCY', 2), #Default Euro
     'default_date_picker_format' => env('DEFAULT_DATEPICKER_FORMAT', 'yyyy-MM-dd HH:mm'),
     'default_date_picker_seperator' => env('DEFAULT_DATEPICKER_SEPERATOR', '-'),
     'default_datetime_format'    => env('DEFAULT_DATETIME_FORMAT', 'Y-m-d H:i'),
