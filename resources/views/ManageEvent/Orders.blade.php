@@ -15,11 +15,12 @@
 @stop
 
 @section('page_title')
-<i class='ico-cart mr5'></i>
-@lang("Event.event_orders")
-<span class="page_title_sub_title hide">
-    {{ @trans("Event.showing_num_of_orders", [30, \App\Models\Order::scope()->count()]) }}
-</span>
+    <i class='ico-cart mr5'></i>
+    @lang("Event.event_orders")
+    &mdash; {{$event->title}}
+    <span class="page_title_sub_title hide">
+        {{ @trans("Event.showing_num_of_orders", [30, \App\Models\Order::scope()->count()]) }}
+    </span>
 @stop
 
 @section('head')

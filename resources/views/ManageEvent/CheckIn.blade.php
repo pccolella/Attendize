@@ -37,6 +37,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <h4>@lang("ManageEvent.check-in") &mdash; {{$event->title}}</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
                 <div class="attendee_input_wrap">
                     <div class="input-group">
                                   <span class="input-group-btn">

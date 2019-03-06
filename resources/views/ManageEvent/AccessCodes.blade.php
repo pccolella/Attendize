@@ -16,6 +16,7 @@
 @section('page_title')
     <i class='ico-money mr5'></i>
     @lang('AccessCodes.title')
+    &mdash; {{$event->title}}
 @stop
 
 @section('content')

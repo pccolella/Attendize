@@ -7,8 +7,9 @@
 
 
 @section('page_title')
-<i class="ico-users"></i>
-@lang("Attendee.attendees")
+    <i class="ico-users"></i>
+    @lang("Attendee.attendees")
+    &mdash; {{$event->title}}
 @stop
 
 @section('top_nav')

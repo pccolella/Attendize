@@ -11,8 +11,9 @@
 @stop
 
 @section('page_title')
-<i class="ico-home2"></i>
-@lang("basic.event_dashboard")
+    <i class="ico-home2"></i>
+    @lang("basic.event_dashboard")
+    &mdash; {{$event->title}}
 @endsection
 
 @section('menu')

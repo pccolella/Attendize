@@ -17,6 +17,7 @@
 @section('page_title')
     <i class='ico-clipboard4 mr5'></i>
     @lang("Surveys.event_surveys")
+    &mdash; {{$event->title}}
 @stop
 
 @section('head')

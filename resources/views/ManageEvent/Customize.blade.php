@@ -17,6 +17,7 @@
 @section('page_title')
     <i class="ico-cog mr5"></i>
     @lang("Event.customize_event")
+    &mdash; {{$event->title}}
 @stop
 
 @section('page_header')

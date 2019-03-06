@@ -15,8 +15,9 @@
 @stop
 
 @section('page_title')
-<i class='ico-code mr5'></i>
-@lang("Widgets.event_widgets")
+    <i class='ico-code mr5'></i>
+    @lang("Widgets.event_widgets")
+    &mdash; {{$event->title}}
 @stop
 
 @section('head')

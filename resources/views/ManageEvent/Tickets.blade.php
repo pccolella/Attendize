@@ -12,6 +12,7 @@
 @section('page_title')
     <i class="ico-ticket mr5"></i>
     @lang("Ticket.event_tickets")
+    &mdash; {{$event->title}}
 @stop
 
 @section('head')
@@ -55,10 +56,11 @@
             <div class="btn-group btn-group-responsive">
                 <button data-modal-id='CreateTicket'
                         data-href="{{route('showCreateTicket', array('event_id'=>$event->id))}}"
-                        class='loadModal btn btn-success' type="button"><i class="ico-ticket"></i> @lang("Ticket.create_ticket")
+                        class='loadModal btn btn-success' type="button">
+                    <i class="ico-ticket"></i> @lang("Ticket.create_ticket")
                 </button>
             </div>
-            @if(false)
+            @if(FALSE)
                 <div class="btn-group btn-group-responsive ">
                     <button data-modal-id='TicketQuestions'
                             data-href="{{route('showTicketQuestions', array('event_id'=>$event->id))}}" type="button"
@@ -79,7 +81,7 @@
         {!! Form::open(array('url' => route('showEventTickets', ['event_id'=>$event->id,'sort_by'=>$sort_by]), 'method' => 'get')) !!}
         <div class="input-group">
             <input name='q' value="{{$q or ''}}" placeholder="@lang("Ticket.search_tickets")" type="text" class="form-control">
-        <span class="input-group-btn">
+            <span class="input-group-btn">
             <button class="btn btn-default" type="submit"><i class="ico-search"></i></button>
         </span>
             {!!Form::hidden('sort_by', $sort_by)!!}
@@ -138,7 +140,7 @@
                                 <li>
                                     <div class="section">
                                         <h4 class="nm">
-                                            {{ ($ticket->quantity_available === null) ? '∞' : $ticket->quantity_remaining }}
+                                            {{ ($ticket->quantity_available === NULL) ? '∞' : $ticket->quantity_remaining }}
                                         </h4>
 
                                         <p class="nm text-muted">@lang("Ticket.remaining")</p>
